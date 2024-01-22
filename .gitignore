@@ -1,0 +1,9 @@
+# Ignore alembic and its configuration
+alembic/
+alembic.ini
+
+# Ignore virtual environment
+venv/
+
+# Ignore environment variables file
+.env
