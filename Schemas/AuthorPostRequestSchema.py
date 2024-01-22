@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class AuthorPostRequestSchema(BaseModel):
@@ -7,3 +7,5 @@ class AuthorPostRequestSchema(BaseModel):
 
 class AuthorSchema(AuthorPostRequestSchema):
     id: int
+
+

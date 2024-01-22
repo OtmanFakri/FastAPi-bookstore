@@ -28,3 +28,25 @@ class AuthorRepository:
             query = query.filter_by(name=name)
 
         return query.offset(start).limit(limit).all()
+
+    def get(self,author : Author) -> Optional[Type[Author]]:
+        return self.db.get(
+            Author,
+            author.id
+        )
+
+    def create(self,auther : Author) -> Author:
+        self.db.add(auther)
+        self.db.commit()
+        self.db.refresh(auther)
+        return auther
+
+    def update(
+            self,
+            id: int,
+            auther: Author,
+    ) -> Author:
+        auther.id = id
+        self.db.merge(auther)
+        self.db.commit()
+        return auther

@@ -1,11 +1,22 @@
 # Test your FastAPI endpoints
 
-GET http://127.0.0.1:8000/
+GET http://127.0.0.1:8000/v1/authors
 Accept: application/json
 
 ###
-
-GET http://127.0.0.1:8000/hello/User
+PATCH http://127.0.0.1:8000/v1/authors/1
 Accept: application/json
+Content-Type: application/json
 
+{
+  "name": "update"
+}
 ###
+POST http://127.0.0.1:8000/v1/authors/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "update"
+}
+

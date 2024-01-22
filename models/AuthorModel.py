@@ -22,5 +22,6 @@ class Author(EntityMeta):
         return {
             "id": self.id.__str__(),
             "name": self.name.__str__(),
+
         }
 

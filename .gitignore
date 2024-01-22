@@ -7,3 +7,4 @@ venv/
 
 # Ignore environment variables file
 .env
+.idea
